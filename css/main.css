@@ -234,6 +234,17 @@ footer {
   margin-left: 10vw;
 }
 
+.home-links {
+  margin: 25vh 5vw 0 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.home-img {
+  width: 25vw;
+  height: 25vh;
+}
 
 @media (min-width: 1400px) {
   .nav-main {
