@@ -5,10 +5,9 @@
 
 /* non-existent class for storing rgb values used later */
 .color-reference {
-  color: rgb(85, 229, 109);
-  color: rgb(237, 237, 75);
-  color: rgb(240, 70, 78);
-  color: rgb(67, 72, 239);
+  color: rgb(81, 255, 0);
+  color: #00ffaa;
+  color: rgb(33, 39, 51);
 }
 
 @font-face {
@@ -23,61 +22,34 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: gidole;
-  src: url("../font/Gidole-Regular.ttf");
-  font-weight: thin;
-  font-style: normal;
-}
 
 body {
-  /* from lecture */
+  background-color: rgb(33, 39, 51);
   font-family: "montserrat", "Times New Roman", Times, sans-serif;
   padding-bottom: 0;
   margin-bottom: 6em;
-  /* background-color: red; */
-  /* height: 100vh; */
-  /* min-height: 100vh; */
-  /* background-color: red; */
 }
 
-/* from lecture */
 section {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-#spacer {
-  background-color: rgb(85, 229, 109);
-  padding-top: 3em;
-  position: relative;
-  top: -2.5em;
+.nav-styleguide {
+  max-width: max-content;
+  padding: 1rem;
 }
 
 .element {
   padding-bottom: 2rem;
   border-top-width: 0.15rem;
   border-top-style: solid;
-  border-top-color: black;
+  border-top-color: white;
 }
 
-p {
-  margin-top: 0;
-  /* from lecture */
-  max-width: 75%;
-  font-size: large;
-  /* highlighted to show width */
-}
-
-nav a:hover,
-nav a:focus {
-  text-decoration: none;
-}
-.nav-styleguide a {
-  margin-left: 1rem;
-}
 code {
-  background-color: #eee;
+  background-color: #07012b;
+  color: rgb(255, 0, 0);
   padding: 0.5rem;
   display: block;
 }
@@ -86,38 +58,38 @@ code {
   INTERACTIVE ELEMENTS -------------------
 */
 
-/* Styling for the navigation button */
+.intext-link {
+  color: rgb(81, 255, 0);;
+}
+
+.intext-link:hover,
+.intext-link:focus {
+  text-decoration: underline;
+  font-weight: bold;
+  filter: drop-shadow(0 0 0.625rem rgb(81, 255, 0));
+}
+
 .button-nav {
   display: inline-block;
   padding: 0.5rem;
   color: white;
-  background-color: rgb(240, 70, 78);
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: 0.2rem solid transparent;
   text-decoration: none;
-  transition-property: background-color;
+  transition-property: all;
   transition-duration: 0.5s;
+  margin-right: 1rem;
 }
 
 .button-nav:hover,
 .button-nav:focus {
-  background-color: rgb(200, 200, 200);
-}
-
-/* got this from lecture */
-.intext-link:hover,
-.intext-link:focus {
-  background-color: red;
-}
-
-/* looked at https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter */
-.image-link:hover,
-.image-link:focus {
-  filter: drop-shadow(0.625rem 0.625rem 0.625rem black);
+  border-bottom: 0.2rem solid rgb(81, 255, 0);
+  color: rgb(81, 255, 0);
+  filter: drop-shadow(0 0 0.625rem rgb(81, 255, 0));
 }
 
 /*Styling for "submit" and "reset" taken from styling for "btn" from https://learn.shayhowe.com/html-css/building-forms/ */
 input[type="submit"] {
-  background: #498f53;
+  background: rgb(58, 182, 0);
   border: 0;
   border-radius: 0.5rem;
   color: #fff;
@@ -136,11 +108,15 @@ input[type="reset"] {
   padding: 0.5rem 1rem;
 }
 
-/* from lecture, idea to put it all under one umbrella is from https://learn.shayhowe.com/html-css/building-forms/*/
+/* idea to put it all under one umbrella is from https://learn.shayhowe.com/html-css/building-forms/*/
 .text-input {
   max-width: 20em;
   padding: 0.1em;
   border-radius: 0.5rem;
+}
+
+label {
+  color: white;
 }
 
 .text-input-box {
@@ -151,17 +127,8 @@ input[type="reset"] {
 }
 
 .text-input-box:hover,
-.text-input-box:focus,
-/* got this trick from here: https://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css-on-a-page-i-am-visiting-and-do-no */
-.text-input-box:not(:placeholder-shown) {
-  background: rgb(67, 72, 239);
-  color: white;
-  border-radius: 0.5rem;
-}
-
-.search-bar {
-  margin: 0 0.75rem 0 0;
-  align-self: flex-end;
+.text-input-box:focus {
+  background: rgb(184, 184, 184);
 }
 
 .radio-buttons {
@@ -169,51 +136,41 @@ input[type="reset"] {
   flex-direction: column;
 }
 
+/* looked at https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter */
+.image-link:hover,
+.image-link:focus {
+  filter: drop-shadow(0 0 0.25rem rgb(81, 255, 0));
+}
+
 /* 
   TEXT ELEMENTS -------------------
 */
 
 .qurova-text {
-  font-family: "qurova", "montserrat", "Times New Roman", Times, sans-serif;
+  font-family: "qurova", "montserrat", Arial, sans-serif;
 }
-/* class for elements that use gidole, applied seperately because gidole doesn't like numbers */
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  font-family: "gidole", "montserrat", "Times New Roman", Times, sans-serif;
-  /* margin-left: 5%; */
-  max-width: 50%;
-}
-/* set headers to use gidole first */
-
-h1 {
-  /* background-color: rgb(85, 229, 109); */
-  text-decoration-line: underline;
-  text-decoration-color: rgb(237, 237, 75);
-}
-
-#product-header {
-  margin-left: 5%;
-}
-
-/* h2 {
-  margin-top: 6rem;
-}
-
-h3 {
-  font-style: italic;
-  margin-top: 1rem;
-}
-
 h4 {
-  margin-bottom: 0.25rem;
-} */
+  font-family: "montserrat", Arial, sans-serif;
+  max-width: 50%;
+  color: #00ffaa;
+}
+
+p {
+  color: white;
+  margin-top: 0;
+  /* from lecture */
+  max-width: 75%;
+  font-size: large;
+  /* highlighted to show width */
+}
+
 li {
-  font-family: "gidole", "montserrat", "Times New Roman", Times, sans-serif;
+  color: white;
+  font-family: "montserrat", Arial, sans-serif;
 }
 
 .centered-text {
@@ -225,76 +182,60 @@ li {
   COMBINED ELEMENTS -------------------
 */
 
-.nav-main {
-  background-color: rgb(85, 229, 109);
+.nav-main{
   display: flex;
   justify-content: right;
-  /* max-width: 45%; */
   min-width: 100%;
-  /* position: relative; */
   position: absolute;
-  /* top: -2.5em; */
-  /* left: -2.5em; */
   top: 0;
-  left: 0;
-
-  /* padding-left: 45%;
-  padding-right: 10%; */
-  padding-top: 3em;
-  /* border-bottom-right-radius: 8px; */
-}
-
-.nav-example {
+  max-width: max-content;
+  padding: 1rem 0 1rem 0;
   position: relative;
 }
 
-.nav-main-item {
-  color: white;
-  text-decoration: none;
-  background-color: rgb(240, 70, 78);
-  padding-left: 0.5%;
-  padding-right: 0.5%;
+/* 
+  OTHER / WEBSITE ELEMENTS -------------------
+*/
+
+footer {
+  min-width: 99%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  justify-self: center;
+  margin-bottom: 0;
+  align-self: flex-end;
+}
+
+.footer-item {
   margin-left: 1%;
   margin-right: 1%;
-  padding: 0.3em;
-  max-width: 30%;
-}
-.nav-main-item:hover,
-.nav-main-item:focus {
-  background-color: rgb(67, 72, 239);
+  padding-top: 0.3%;
+  padding-bottom: 0.3%;
+  color: white;
 }
 
-.logo {
-  background-color: white;
-  border-radius: 0.5rem;
+.footer-item:hover,
+.footer-item:focus {
+  color: rgb(81, 255, 0);
+  filter: drop-shadow(0 0 0.625rem rgb(81, 255, 0));
 }
 
-.logo:hover,
-.logo:focus {
-  background-color: white;
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo-image {
-  max-width: 26em;
-  /* max-width: 35%; */
+.page-content {
+  margin-left: 10vw;
 }
 
-.cart-image {
-  max-width: 1.5rem;
-  min-height: 2rem;
-  background-color: transparent;
-  margin-right: 2.5rem;
-}
-
-.spacer-top {
-  min-height: 6em;
-}
 
 @media (min-width: 1400px) {
-  .logo {
-    position: absolute;
-    left: 5%;
-  }
   .nav-main {
     margin-bottom: 3%;
   }
@@ -302,8 +243,6 @@ li {
 @media (max-width: 1399px) {
   .nav-main {
     flex-direction: column;
-    /* align-content: center; */
-    /* padding-left: 15%; */
     max-width: 100%;
     align-items: center;
     padding-top: 1em;
@@ -313,546 +252,11 @@ li {
     margin-bottom: 0.3em;
     min-width: 30%;
   }
-  .search-bar {
-    /* padding-left: 15%; */
-    align-self: center;
-    width: 30%;
-  }
-  .logo-image {
-    max-width: 15em;
-    max-width: 100%;
-  }
-  .spacer-top {
-    height: 18em;
-  }
-}
 
-footer {
-  min-width: 90%;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  background-color: rgb(85, 229, 109);
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  justify-self: center;
-  margin-bottom: 0;
-  align-self: flex-end;
-}
-
-.footer-example {
-  position: relative;
-}
-
-.footer-item {
-  margin-left: 1%;
-  margin-right: 1%;
-  padding-top: 0.3%;
-  padding-bottom: 0.3%;
-}
-
-/* @media (max-height: 10000em) {
-  footer {
-    position: fixed;
-  }
-} */
-
-.page-container {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 5%;
-  /* background-color: red; */
-}
-
-.page-main {
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  top: 3vh;
-}
-.page-product {
-  margin-top: 3%;
-  flex-direction: column;
-}
-
-.main-logo {
-  max-width: 30%;
-  margin-bottom: 1%;
-  border-color: rgb(85, 229, 109);
-  border-style: solid;
-  border-width: 0;
-  border-bottom-width: 0.3em;
-}
-
-.banner-image {
-  min-width: 100%;
-  /* height: 10em; */
-}
-
-.main-grid {
-  /* referenced from here: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout */
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  column-gap: 5%;
-  /* background-color: red; */
-  margin: 1%;
-  max-width: 70%;
-  margin-bottom: 3%;
-  /* height: 10em; */
-  /* max-width: 100vw; */
-  /* background-color: blue; */
-}
-
-.main-grid-item {
-  /* background-color: blue; */
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  text-align: center;
-  color: black;
-  /* max-width: 15%; */
-  /* max-width: 5em; */
-}
-.main-grid-item:hover,
-.main-grid-item:focus {
-  filter: drop-shadow(0 0 0.15rem black);
-}
-
-.main-grid-image {
-  min-width: 100%;
-}
-
-@media (max-width: 1399px) {
-  .main-logo {
-    max-width: 60%;
-  }
-  .banner-image {
-    max-width: 100%;
-  }
-}
-
-.checkout-container {
-  display: flex;
-  flex-direction: column;
-  margin: 2em 1rem 0 1rem;
-}
-
-@media only screen and (max-width: 1399px) {
-  .checkout-container {
-    margin-top: 0;
-  }
-}
-
-.cart-and-total-container {
-  display: flex;
-  flex-direction: column;
-  margin-right: 0;
-}
-
-.sidebar-container {
-  display: flex;
-  flex-direction: column;
-  margin-right: 3%;
-}
-
-.sidebar-content {
-  margin-left: 8%;
-  margin-bottom: 0.2em;
-  color: rgb(240, 70, 78);
-}
-.sidebar-content:hover,
-.sidebar-content:focus {
-  color: rgb(67, 72, 239);
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.product-card {
-  /* flex: 1; */
-  display: flex;
-  flex-direction: column;
-  max-width: 20em;
-
-  /* max-width: 20%; */
-  border-style: solid;
-  border-color: rgb(85, 229, 109);
-  border-width: 0.1em;
-  border-radius: 0.5rem;
-  /* background-color: rgb(201, 190, 128); */
-  /* margin-left: 10%; */
-  margin: 1em;
-  min-height: fit-content;
-  /* height: 32em; */
-}
-
-/*Learned about drop-shadow here: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow*/
-.product-card:hover,
-.product-card:focus-within {
-  background-color: #f2ecec;
-  filter: drop-shadow(0 0 0.15rem black);
-}
-
-.product-image {
-  max-width: 100%;
-  min-height: 19.5rem;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  margin-bottom: 0;
-  margin: 0;
-}
-.product-card-name,
-.product-card-caption {
-  margin: 0;
-}
-
-.product-card-text {
-  display: flex;
-  flex-direction: row;
-}
-
-.product-card-name {
-  background-color: rgb(85, 229, 109);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  font-size: larger;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  flex: 1;
-  /* padding-left: 0.5em; */
-}
-
-.product-card-caption {
-  justify-self: right;
-  background-color: rgb(237, 237, 75);
-  border-radius: 0.5rem;
-  padding: 0.3em;
-  padding-bottom: 0;
-}
-
-.product-card p {
-  text-align: center;
-  max-width: 100%;
-  color: black;
-  text-decoration: none;
-}
-
-/* removes underline from anchors, might cause problems later */
-a {
-  text-decoration: none;
-}
-
-.product-card-link {
-  align-self: center;
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-  /* big thanks to https://stackoverflow.com/questions/31000885/align-an-element-to-bottom-with-flexbox */
-  margin-top: auto;
-  margin-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  max-width: auto;
-}
-
-.product-page-image {
-  max-width: 40em;
-  max-height: 30rem;
-  border-style: solid;
-  border-color: rgb(85, 229, 109);
-  border-width: 0.4em;
-  border-radius: 0.5rem;
-}
-
-.product-page-inner {
-  /* margin-left: 5%; */
-  display: flex;
-  flex-direction: row;
-  max-width: 70vw;
-  justify-content: flex-end;
-  align-self: center;
-  gap: 45%;
-  /* background-color: red; */
-}
-
-.product-page-inner h2 {
-  margin-top: 7.5rem;
-}
-
-.product-page-title {
-  align-self: center;
-  /* font-size: xx-large; */
-}
-
-.product-page-buy {
-  border-radius: 0.5rem;
-}
-
-.product-page-feedback {
-  display: flex;
-  flex-direction: column;
-  max-width: 50rem;
-  margin-top: 5rem;
-}
-.product-page-feedback input {
-  max-width: fit-content;
-  margin-top: 1rem;
-}
-
-.product-page-caption {
-  justify-self: center;
-  align-self: center;
-  background-color: rgb(237, 237, 75);
-  border-radius: 0.5rem;
-  padding: 0.7em;
-  /* padding-bottom: 0; */
-  font-size: large;
-}
-
-@media (min-width: 1400px) {
-}
-@media (max-width: 1399px) {
-  .product-page-inner {
-    flex-direction: column;
-    align-items: center;
-    /* background-color: red; */
-  }
-}
-
-#cart-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#product-list {
-  display: flex;
-  flex-direction: column;
-  border-style: solid;
-  border-radius: 0.5rem;
-  border-color: rgb(85, 229, 109);
-  min-width: min-content;
-}
-
-/* Read about the text-align property from here: https://www.w3schools.com/cssref/pr_text_text-align.php  */
-#product-list p {
-  text-align: center;
-}
-
-.product-listing {
-  display: flex;
-  flex-direction: row;
-}
-
-.top-listing {
-  display: flex;
-  flex-direction: row;
-  border-style: solid;
-  border-width: 0 0 medium 0;
-  border-color: rgb(85, 229, 109);
-}
-
-#checkout-total {
-  display: flex;
-  flex-direction: row;
-  border-style: solid;
-  max-width: fit-content;
-  margin-top: 2em;
-  border-radius: 0.5rem;
-  border-color: rgb(85, 229, 109);
-}
-
-.charge-name {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 1.5rem 0 0.5rem;
-}
-
-.charge-amount {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0.5rem 0 1.5rem;
-}
-
-.product-name,
-.product-unit,
-.product-price {
-  margin: 0;
-  font-family: gidole;
-  flex: 1 1 33%;
-}
-
-.product-name {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.product-name-img {
-  width: 10rem;
-  height: 12rem;
-}
-
-.product-name-label {
-  font-family: "gidole", "montserrat", "Times New Roman", Times, sans-serif;
-  font-size: large;
-  max-width: 2.48rem;
-  padding-right: 35%;
-}
-
-.product-unit {
-  border-style: solid;
-  border-color: rgb(85, 229, 109);
-  border-width: 0 medium 0 medium;
-}
-
-.product-listing p {
-  padding-top: 5rem;
-}
-
-.cart-label {
-  border-style: solid;
-  border-width: 0 0 medium 0;
-  margin: 0;
-  border-color: rgb(85, 229, 109);
-  flex: 1 1 33%;
-  min-width: 14.5em;
-}
-
-.middle-box {
-  border-left-width: medium;
-  border-right-width: medium;
-}
-
-#payment-form {
-  border-style: solid;
-  border-radius: 0.5rem;
-  border-color: rgb(85, 229, 109);
-  padding: 1em;
-  max-width: 31rem;
-  margin-top: 2em;
-}
-
-#payment-selector,
-#card-info,
-#billing {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-#card-info input,
-#billing input {
-  border-radius: 0.5rem;
-  border-style: solid;
-  margin: 0.25rem;
-  padding: 0.5rem;
-}
-
-.card-info-security,
-.billing-name,
-.billing-location {
-  display: flex;
-  flex-direction: row;
-  gap: 0.9rem;
-}
-
-.card-info-security input,
-.billing-name input,
-.billing-location input {
-  width: 50%;
-}
-
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5rem;
-}
-
-#contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact-info p {
-  font-weight: bold;
-  font-size: medium;
-  text-align: center;
-}
-
-#contact-fast {
-  max-width: 18rem;
-}
-
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  border-style: solid;
-  border-radius: 0.5rem;
-  border-color: rgb(85, 229, 109);
-  max-width: 31rem;
-  padding: 1em;
-  margin-bottom: 1rem;
-}
-
-.contact-field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-}
-
-.contact-field label {
-  margin-bottom: 0.25rem;
-  font-weight: bold;
-}
-
-.contact-field input,
-.contact-field select {
-  border-radius: 0.5rem;
-  border-style: solid;
-}
-
-/* #news, */
-#citations {
-  margin-left: 12.5rem;
-}
-#news {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-#news-list {
-  /* margin: 2.5rem 0 0 7.5rem; */
-}
-
-.news-item {
-  display: flex;
-  flex-direction: column;
-  max-width: 115rem;
-  border-radius: 0.5rem;
-  border-style: solid;
-  border-color: rgb(85, 229, 109);
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.news-item h2,
-.news-item p {
-  max-width: fit-content;
 }
 
 #citations-list {
+  margin-left: 30vw;
   max-width: 50rem;
   margin-bottom: 5rem;
 }
