@@ -2,31 +2,23 @@
 <html lang="en-CA">
 
   <head>
-
     <meta charset="utf-8">
-    <title>P01 - Style Guide Template</title>
-
+    <title>Style Guide</title>
     <link href="css/main.css" rel="stylesheet">
-
   </head>
 
   <body>
 
     <header>
-      <h1>P01 - Style Guide Template</h1>
-
-      <p>A template you can use to start building out your own style guides with.</p>
-
-
+      <h1>Style Guide</h1>
       <nav class="nav-styleguide">        
-        <a href="#interactive_elements">Interactive Elements</a>
-        <a href="#text_elements">Text Elements</a>
-        <a href="#combined_elements">Combined Elements</a>
-        <a href="product_listing.html">Product Listing Template</a>
-        <a href="checkout.html">Checkout Template</a>
-        <a href="citations.html">Citations</a>
-        <a href="index.html">Website Homepage</a>
+        <a class="button-nav qurova-text" href="#interactive_elements">Interactive Elements</a>
+        <a class="button-nav qurova-text" href="#text_elements">Text Elements</a>
+        <a class="button-nav qurova-text" href="#combined_elements">Combined Elements</a>
+        <a class="button-nav qurova-text" href="citations.html">Citations</a>
+        <a class="button-nav qurova-text" href="index.html">Website Homepage</a>
       </nav>
+    </header>
 
 
 
@@ -45,8 +37,7 @@
           <code>&lt;a href="url" class="intext-link" &gt;link text&lt;/a&gt;</code>
 
         <h4>Rendered element:</h4>
-          <p>Here is an example text with a <a class="intext-link qurova-text" href="https://www.w3schools.com/html/html_links.asp">link</a>.</p>
-        <!-- studied up on using anchors from here: https://www.w3schools.com/html/html_links.asp -->
+          <p>Here is an example of an in-text <a class="intext-link qurova-text" href="https://www.w3schools.com/html/html_links.asp">link</a>.</p>
       </section>
 
 
@@ -59,7 +50,7 @@
           <code>.button-nav</code>
         
         <h4>Sample code:</h4>
-          <code>&lt;a class="button-nav qurova-text" href="#locationID" class="button-nav"&gt;Link Text&lt;/a&gt;</code>
+          <code>&lt;a class="button-nav qurova-text" href="#interactive_elements" class="button-nav"&gt;Link Text&lt;/a&gt;</code>
 
 
         <h4>Rendered element:</h4>
@@ -85,7 +76,7 @@
           <input type="reset" class="qurova-text" name="submitButtonExample" value="Sample Reset Button">
       </section>
 
-      <!-- Reformatted to wrap the label around the input per: https://learn.shayhowe.com/html-css/building-forms/ -->
+      <!-- Reformatted to wrap the label per: https://learn.shayhowe.com/html-css/building-forms/ -->
       <section class="element">
         <h3>Text Input Field with Label</h3>
 
@@ -93,12 +84,22 @@
           <code>.text-input</code>
         
         <h4>Sample code:</h4>
-          <code>&lt;form class="text-input&gt;&lt;label for="inputName" class="text-input-label"&gt; label text &lt;input class="text-input-box" type="text" id="inputId" name="inputName" placeholder=" "&gt; &lt;/label&gt;&lt;/form&gt;
-             </code>
+          <code>
+            &lt;form class="text-input&gt; <br>
+            &lt;label for="TextInputWLabel"&gt; <br>
+            Text Input with Label <br>
+            &lt;input class="text-input-box" type="text" id="TextInputWLabel" name="textInputWLabel" placeholder=" "&gt; <br>
+            &lt;/label&gt; <br>
+            &lt;/form&gt;
+          </code>
 
         <h4>Rendered element:</h4>
-          <form class="text-input"><label for="TextInputWLabel" class="text-input-label">Text Input with Label <input class="text-input-box" type="text" id="TextInputWLabel" name="textInputWLabel" placeholder=" "></label></form>
-          <!-- <input type="text" id="TextInputWLabel" name="textInputWLabel"/> -->
+          <form class="text-input">
+            <label for="TextInputWLabel">
+              Text Input with Label
+              <input class="text-input-box" type="text" id="TextInputWLabel" name="textInputWLabel" placeholder=" ">
+            </label>
+          </form>
       </section>
 
 
@@ -133,11 +134,10 @@
           <code>.image-link</code>
         
         <h4>Sample code:</h4>
-          <code>&lt;a class="image-link" href="url" class="image-link" &gt;&lt;img src="img source" &gt;&lt;/a&gt;</code>
+          <code>&lt;a class="image-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img" &gt;&lt;img src="img\Contrast.JPG" &gt;&lt;/a&gt;</code>
 
         <h4>Rendered element:</h4>
-          <a class="image-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img"><img src="img\nwnEye.png"></a>
-      <!-- had to remind myself about which attribute let me determine image source by looking at https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img -->
+          <a class="image-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img"><img src="img\Contrast.JPG"></a>
         </section>
 
     </section>
@@ -159,13 +159,18 @@
           <code>h4</code>
         
         <h4>Sample code:</h4>
-          <code>&lt; h1 &gt;Header 1&lt; /h1 &gt;&lt; h2 &gt;Header 2&lt; /h2 &gt;&lt; h3 &gt;Header 3&lt; h3 &gt;&lt; h4 &gt;Header 4&lt; h4 &gt;</code>
+          <code>
+            &lt; h1 &gt;Header 1&lt; /h1 &gt; <br>
+            &lt; h2 &gt;Header 2&lt; /h2 &gt; <br>
+            &lt; h3 &gt;Header 3&lt; /h3 &gt; <br>
+            &lt; h4 &gt;Header 4&lt; h4 &gt;
+          </code>
 
         <h4>Rendered element:</h4>
-          <h1>First layer of headers</h1>
-            <h2>Second layer of headers</h2>
-              <h3>Third layer of headers</h3>
-                <h4>Fourth layer of headers</h4>
+          <h1>Header 1</h1>
+            <h2>Header 2</h2>
+              <h3>Header 3</h3>
+                <h4>Header 4</h4>
       </section>
 
       <section class="element">
@@ -212,9 +217,35 @@
 
     <!-- COMBINED ELEMENTS SECTION // -->
     <section id="combined_elements">
+      <h2>Combined Elements</h2>
 
+      <section class="element">
+        <h3>Main Navigation</h3>
+
+        <h4>CSS selector:</h4>
+          <code>.nav-main</code>
+          <code>.nav-main-item, .nav-main-item:hover, .nav-main-time:focus</code>
+        
+        <h4>Sample code:</h4>
+          <code>
+            &lt;nav class="nav-main qurova-text"&gt; <br>
+              &lt;a href="index.html" class="button-nav"&gt;Home&lt;/a&gt; <br>
+              &lt;a href="previous-work.html" class="button-nav"&gt;Previous Work&lt;/a&gt; <br>
+              &lt;a href="about.html" class="button-nav"&gt;About&lt;/a&gt; <br>
+              &lt;a href="contact.html" class="button-nav"&gt;Contact&lt;/a&gt; <br>
+            &lt;/nav&gt;
+          </code>
+
+        <h4>Rendered element:</h4>
+          <nav class="nav-main qurova-text">
+            <a href="index.html" class="button-nav">Home</a>
+            <a href="previous-work.html" class="button-nav">Previous Work</a>
+            <a href="about.html" class="button-nav">About</a>
+            <a href="contact.html" class="button-nav">Contact</a>
+          </nav>
+              <!--Referenced the Robot demo-->
+      </section>
     </section>
     <!-- // COMBINED ELEMENTS SECTION -->
-
   </body>
 </html>
