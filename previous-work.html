@@ -21,36 +21,29 @@
         <Section class="page-content">
             <h2>Process Analysis 1</h2>
             <p>
-                This is a short audio drama. This is a solo project for CMNS 226: 
-                Digital Storytelling for Public Engagement, where the objective was 
-                to create a narrative sequence that solely relies on sound. I used a mix of 
-                pre-recorded sounds and original audio (e.g. dialogue), which I then processed 
-                using different techniques.
+                This is a top-down shooter game. This is a solo project for IAT 167: Digital Games: Genre, Structure, Programming and Play, where the objective was to create a basic shooter. While the core gameplay (e.g. shooting enemies while moving around to avoid touching them) was predetermined, I designed extra features such as power-ups, multiple waves, and different enemy types. I made the game in JavaScript on p5.js.
             </p>
             <p>
-                One problem I encountered was that some of the sounds that I needed were not available in the sound libraries I was using. In order to resolve this, I had to create my own sounds. For some sounds, this was fairly easy (e.g. knocking on a table to create a door-knocking sound), while others required some audio processing to create the desired sound.
+                One challenge that I encountered was that I had to find a way to make the game difficult in a way that was not lazy/relied on cheap solutions (e.g. spawning a bunch of basic enemies, giving the boss a large amount of health) and that would be fun for the player. My solution to do this was to implement different enemy types which would begin to spawn as the player progressed through the game.
             </p>
             <p>
-                Another challenge was that some scenes involved a transition in settings (e.g. going from a bustling city to the inside of an office), which is not easy to do when you lack a visual component. I solved this by establishing clear soundscapes for each setting (e.g. traffic sounds for a cityscape, fax/printing sounds and faint voices for a busy office). I also used transition sounds (e.g. sliding doors opening and closing) and techniques like fade-in/fade-out to clearly convey that the protagonist is moving from one environment to another.
+                Another problem I faced was that when I gave certain enemies the ability to shoot projectiles, their projectiles would hit other enemies and damage them. In order to solve this, I separated their projectiles into a separate subclass and made it so that only player projectiles damage enemies.
             </p>
             <p>
-                Through this project, I gained further experience using different processing techniques, and I learned how to tell narratives using only soundscapes and sound effects to support dialogue.
+                Through this project, I gained experience designing shooter games, a genre that I had experience with as a player but not as a designer. I also learned how to add difficulty to a game while also providing a fun experience for the player. In terms of game development, I gained experience developing games with JavaScript and troubleshooting bugs/poorly-implemented features.
             </p>
         </Section>
 
         <Section class="page-content">
             <h2>Process Analysis 2</h2>
             <p>
-                This is a narrative soundscape. It was a solo project for CA149: Sound. The objective of this project was to create a story told through an environmental soundscape (i.e. no dialogue). I used a mix of sounds sourced from a sound library and original sounds, which I processed to create a layered audio environment.
+                This is a platformer game. It was a solo project for IAT 167: Digital Games: Genre, Structure, Programming and Play. The objective of this project was to create a platformer game. The only requirement was that the game needed to be a platformer, so the core gameplay (moving around the map to rescue NPCs and collect treasures) was my own design. I also designed the additional gameplay concepts (e.g. constantly respawning enemies, platforms that are only usable after using a specific power-up). In terms of development, I made a UML diagram to map out the classes I needed to implement, and I made the game in JavaScript on p5.js.
             </p>
             <p>
-                The main challenge with this assignment was creating the layered environment, as I needed to make the listener feel like the sounds were coming from different directions and different distances. To do this, I placed sounds on different audio tracks based on their distance (e.g. background, foreground) and their positioning (e.g., on the listener’s left).
+                The main challenge with this project was having to adjust the complexity/scope of the gameplay. While p5.js is easy to work with and the programs made with it can run on any browser, eliminating the need for downloads, it is not very powerful, making it difficult to add more complex features (e.g. multiple levels). In order to solve this, I had to adapt my original game concept to fit the capabilities of p5.js. This meant having to go from multiple levels to a single level and adding respawning enemies to maintain the difficulty.
             </p>
             <p>
-                Another challenge was designing sounds to represent certain elements of the soundscape. The soundscape had a fantasy theme to it, so certain elements needed original sounds as there were no appropriate sounds available in the sound library (e.g there were no specific “fairy” noises). As such, I had to record new sounds/take existing sounds and modify them so that they were representative of their respective elements (e.g. modifying the sound of wind chimes to make them into a “fairy-like” sound).
-            </p>
-            <p>
-                This project taught me how to create soundscapes, which are useful for immersing your audience in an environment. This is also a valuable skill for film and video games, as even though you can visually show your audience an environment, in order to properly immerse them in an environment, you need to support it with a soundscape.
+                In terms of game design, I learned how to design platformer games and add multi-state elements (e.g. unlockable platforms). In terms of game development, I learned how to implement collision when working with sprites, which do not always have conventional shapes.
             </p>
         </Section>
     </body>
