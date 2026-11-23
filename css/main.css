@@ -246,6 +246,11 @@ footer {
   height: 25vh;
 }
 
+.process-img {
+  width: 50vw;
+  height: 50vh;
+}
+
 @media (min-width: 1400px) {
   .nav-main {
     margin-bottom: 3%;
